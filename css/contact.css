@@ -1,0 +1,76 @@
+/* General contact section styling */
+.contact-section {
+    max-width: 800px;
+    margin: 80px auto; /* Adjust top margin as needed, auto for horizontal centering */
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-form-container {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Limit form width */
+    margin: auto; /* Center the form container */
+}
+
+.contact-form-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact-form-container p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form group for labels and inputs */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+.form-group label {
+    display: block; /* Make labels take full width */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 120px;
+}
+
+/* Submit button styling */
+.submit-button {
+    background-color: #333; /* Dark background for the button */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px; /* More rounded button */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #555; /* Darker on hover */
+}
