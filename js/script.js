@@ -1,48 +1,20 @@
-// script.js
+// NAVIGATION BAR AND FOOTER
 
-// --- NAVIGATION BAR AND FOOTER ---
-document.addEventListener('DOMContentLoaded', function() {
-    fetch("/html/nav.html") // Adjusted path if nav.html is in an 'html' folder
-        .then(response => response.text())
-        .then(data => {
-            const navContainer = document.getElementById("nav-container");
-            if (navContainer) {
-                navContainer.innerHTML = data;
-                // After injecting the nav HTML, initialize the hamburger menu
-                initializeHamburgerMenu();
-            }
-        })
-        .catch(error => console.error('Error fetching navigation:', error));
+fetch("nav.html")
+    .then(Response => Response.text())
+    .then(data => document.getElementById("nav-container").innerHTML = data);
 
-    fetch("/html/footer.html") // Adjusted path if footer.html is in an 'html' folder
-        .then(response => response.text())
-        .then(data => {
-            const footerContainer = document.getElementById("footer-container");
-            if (footerContainer) footerContainer.innerHTML = data;
-        })
-        .catch(error => console.error('Error fetching footer:', error));
-});
-// --- END NAVIGATION BAR AND FOOTER ---
+fetch("footer.html")
+    .then(Response => Response.text())
+    .then(data => document.getElementById("footer-container").innerHTML = data);
+
+// NAVIGATION BAR AND FOOTER
 
 
-// --- HAMBURGER MENU (Function to be called after nav is loaded) ---
-
-function initializeHamburgerMenu() {
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    // Select the new wrapper div instead of individual nav links
-    const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-
-    if (hamburgerMenu && navLinksWrapper) { // Check for the new wrapper
-        hamburgerMenu.addEventListener('click', () => {
-            navLinksWrapper.classList.toggle('active'); // Toggle active on the wrapper
-            hamburgerMenu.classList.toggle('active');
-        });
-    }
-} 
-// --- END HAMBURGER MENU ---
 
 
-// --- LOGIN AND SIGNUP FORM ---
+
+// LOGIN AND SIGNUP FORM
 document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.getElementById('login-form');
     const signupForm = document.getElementById('signup-form');
@@ -61,40 +33,48 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-// --- END LOGIN AND SIGNUP FORM ---
+
+// LOGIN AND SIGNUP FORM
 
 
-// --- FAQ SECTION ---
+// FAQ SECTION
 document.addEventListener('DOMContentLoaded', function () {
     const questionAnswers = document.querySelectorAll('.question-answer');
+   
+    // Ensure questionAnswers is not empty before proceeding
+    if (questionAnswers.length > 0) {
+        questionAnswers.forEach(questionAnswer => {
+            const question = questionAnswer.querySelector('.show-question');
+            const answer = questionAnswer.querySelector('.show_answer');
 
-    questionAnswers.forEach(questionAnswer => {
-        const question = questionAnswer.querySelector('.show-question');
-        const answer = questionAnswer.querySelector('.show_answer');
+            if (question && answer) { // Double check within the loop
+                question.addEventListener('click', toggleAnswer);
+                answer.addEventListener('click', toggleAnswer);
 
-        if (question && answer) {
-            function toggleAnswer() {
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                } else {
-                    answer.style.display = 'block';
+                function toggleAnswer() {
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                    } else {
+                        answer.style.display = 'block';
+                    }
                 }
             }
-            question.addEventListener('click', toggleAnswer);
-            answer.addEventListener('click', toggleAnswer);
-        }
-    });
+        });
+    }
 });
-// --- END FAQ SECTION ---
+
+// FAQ SECTION
 
 
-// --- CONTACT FORM SUBMISSION ---
+
+
+// CONTACT FORM SUBMISSION
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.querySelector('.contact-form');
 
-    if (contactForm) {
+    if (contactForm) { // Check if the contact form exists
         contactForm.addEventListener('submit', function (event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission
 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
@@ -111,4 +91,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-// --- END CONTACT FORM SUBMISSION ---
+
+// CONTACT FORM SUBMISSION
