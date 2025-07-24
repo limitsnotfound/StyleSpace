@@ -68,3 +68,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // FAQ SECTION
 
+// CONTACT FORM SUBMISSION
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.querySelector('.contact-form');
+
+    if (contactForm) { // Check if the contact form exists
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            console.log('Contact Form Submitted:');
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            alert('Thank you for your message, ' + name + '! We will get back to you soon.');
+
+            contactForm.reset();
+        });
+    }
+});
+
+// CONTACT FORM SUBMISSION
