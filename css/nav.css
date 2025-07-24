@@ -1,73 +1,66 @@
-/* --- Media Queries for Responsiveness --- */
-@media (max-width: 768px) {
-    .navigation-bar {
-        /* Keep main navigation bar flex for icon and logo positioning */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 15px;
-        height: 50px;
-    }
+.hero-container {
+    max-width: 1440px;
+    max-height: 1024px;
+}
 
-    .hamburger-menu {
-        display: flex; /* Show the hamburger menu icon */
-        order: 1;
-    }
-
-    .navigation-bar-center {
-        order: 2;
-        flex-grow: 1;
-        text-align: center;
-    }
-
-    /* Hide individual nav link groups by default in desktop view */
-    /* This rule should be outside the @media query if you want them hidden
-       only on mobile when the wrapper is not active.
-       However, if you always want them hidden inside the wrapper unless active:
-    */
-    .navigation-bar-left,
-    .navigation-bar-right {
-        display: none; /* Hide these individual lists by default */
-        width: 100%; /* Take full width within their container */
-        padding: 0;
-        margin: 0;
-    }
+.navigation-bar {
+    margin: auto;
+    margin-bottom: 32px;
+    position: relative;
+    top: 12px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    height: 44px;
+    background-color: rgb(229, 229, 229);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+}
 
 
-    /* The new wrapper for all nav links */
-    .nav-links-wrapper {
-        display: none; /* Hidden by default */
-        flex-direction: column; /* Stack children vertically */
-        width: 100%;
-        position: absolute;
-        top: 50px; /* Position directly below the main nav bar */
-        left: 0;
-        background-color: rgb(229, 229, 229);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-        border-radius: 0 0 16px 16px; /* Apply rounded corners to the whole menu */
-        overflow: hidden; /* Clear any floating elements if applicable */
-    }
+.navigation-bar-left {
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 16px;
+}
 
-    /* When the wrapper is active, show it and its contents */
-    .nav-links-wrapper.active {
-        display: flex; /* Show the wrapper (which contains both ULs) */
-    }
+.navigation-bar-center {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Times New Roman';
+    justify-items: center;
 
-    /* When the wrapper is active, show the individual nav link groups inside it */
-    .nav-links-wrapper.active .navigation-bar-left,
-    .nav-links-wrapper.active .navigation-bar-right {
-        display: flex; /* Show the individual ULs within the active wrapper */
-        flex-direction: column; /* Ensure individual ULs also stack their list items */
-        padding: 10px 0; /* Add padding within each list */
-    }
+}
 
+.main-logo {
+    font-size: 20px;
+    font-weight: bolder;
 
-    .nav-links li {
-        text-align: center;
-        margin: 10px 0;
-    }
+}
 
-    /* Adjust main-logo and location for smaller screens */
-    /* The order properties above handle this, so no absolute positioning here */
+.location {
+    font-size: 12px;
+}
+
+.navigation-bar-right {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: right;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding-right: 20px;
 }
