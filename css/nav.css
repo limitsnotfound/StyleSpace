@@ -64,3 +64,24 @@
     font-weight: 500;
     padding-right: 20px;
 }
+
+
+
+.promo-marquee-container {
+    background-color: #f0f0f0; /* Light gray background */
+    color: red; /* Red text color */
+    padding: 8px 0; /* Vertical padding */
+    margin-top: 10px; /* Space from the navigation bar */
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden; /* Ensures text stays within the container */
+    white-space: nowrap; /* Prevents text from wrapping */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+.promo-marquee-container marquee {
+    display: block; /* Ensures it takes up full width */
+    width: 100%;
+    line-height: 1.5; /* Adjust line height for better readability */
+}
