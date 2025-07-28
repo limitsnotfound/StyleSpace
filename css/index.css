@@ -1,59 +1,203 @@
-/*Placker*/
-
+/* Placker */
 
 body {
-   max-width: 1440px;
-   margin: auto;
-   font-family: arial;
-   font-size: 16px;
+  max-width: 1440px;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif; /* A more modern and versatile font */
+  font-size: 16px;
+  line-height: 1.6; /* Improved readability */
+  color: #333; /* Default text color */
+  background-color: #f9f9f9; /* Light background for the body */
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: #333; /* Default link color */
 }
 
-
-/* HERO-SECTION */
+/* --- HERO SECTION --- */
 .hero-container {
-    max-width: 1440px;
-    max-height: 1024px;
+  width: 100%; /* Ensure it takes full width */
+  max-height: 800px; /* Limit height for aesthetic appeal */
+  overflow: hidden; /* Hide overflowing parts of the image */
+  position: relative; /* For potential overlays or text */
+  margin-bottom: 60px; /* Space below the hero section */
 }
 
 .hero-section-image img {
-    max-width: 100%;
-    max-height: 60%;
-    border-radius: 20px;
+  width: 100%; /* Make image fill container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below image */
+  border-radius: 0 0 25px 25px; /* Slightly rounded bottom corners */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+  max-height: 800px; /* Prevent image from becoming too tall */
 }
 
 
-
+/* --- SUBSCRIBE/ABOUT US SECTION --- */
 .subcribe_about_us {
-    margin: auto;
-    margin-top: 100px;
-    max-width: 600px;
-    text-align: center;
+  margin: 0 auto; /* Center the section */
+  padding: 0 25px; /* Add horizontal padding */
+  max-width: 900px; /* Increased max-width for better content flow */
+  text-align: center;
 }
 
 .subcribe_about_us_top {
-    text-align: center;
-    font-size: 14px;
-    font-family: 'Times New Roman';
-    line-height: 1.5;
-    margin-bottom: 50px;
+  font-size: 1.1em; /* Slightly larger font for main content */
+  font-family: 'Georgia', serif; /* A classic serif font for descriptive text */
+  line-height: 1.8; /* Increased line height for readability */
+  margin-bottom: 60px; /* More space between top and bottom parts */
+  color: #555; /* Softer text color for body paragraphs */
+}
+
+.subcribe_about_us_top p {
+  margin-bottom: 25px; /* Space between paragraphs */
+}
+
+.subcribe_about_us_bottom {
+  background-color: #ffffff; /* White background for the subscription box */
+  padding: 40px; /* Generous padding inside the box */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+  margin-bottom: 80px; /* Space below the subscription section */
+  border: 1px solid #e0e0e0; /* Subtle border */
 }
 
 .subcribe_about_us_bottom h3 {
-    font-size: 12px;
+  font-size: 1.5em; /* Larger, more impactful heading */
+  color: #333; /* Darker color for heading */
+  margin-bottom: 15px;
+  text-transform: uppercase; /* Uppercase for a sleek look */
+  letter-spacing: 1px;
 }
 
 .subcribe_about_us_bottom p {
-    font-size: 12px;
-    margin-bottom: 32px;
+  font-size: 0.95em; /* Slightly larger and clearer paragraph */
+  color: #666; /* Softer color for supporting text */
+  margin-bottom: 30px; /* Space below paragraph */
+  line-height: 1.5;
 }
 
+.subcribe_about_us_bottom div { /* Target the div containing the input */
+  display: flex; /* Use flexbox for input and button alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Align vertically */
+  max-width: 400px; /* Limit input group width */
+  margin: 0 auto; /* Center the input group */
+}
+
+.subcribe_about_us_bottom input[type="email"] {
+  flex-grow: 1; /* Allow input to take available space */
+  padding: 15px 20px; /* More padding for a substantial feel */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 8px 0 0 8px; /* Rounded left corners, sharp right */
+  font-size: 1em;
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+  background-color: #fefefe;
+}
+
+.subcribe_about_us_bottom input[type="email"]:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Subtle shadow on focus */
+}
+
+.subcribe_about_us_bottom div::after { /* Add a pseudo-element for a "Subscribe" button */
+  content: "Subscribe"; /* Text for the button */
+  background-color: #007bff; /* Primary brand color for button */
+  color: white;
+  padding: 15px 25px; /* Match input padding */
+  border-radius: 0 8px 8px 0; /* Sharp left, rounded right */
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.subcribe_about_us_bottom div::after:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .hero-container {
+    max-height: 500px; /* Adjust hero height for tablets */
+  }
+
+  .subcribe_about_us {
+    padding: 0 20px;
+  }
+
+  .subcribe_about_us_top {
+    font-size: 1em;
+    line-height: 1.7;
+  }
+
+  .subcribe_about_us_bottom {
+    padding: 30px 25px;
+  }
+
+  .subcribe_about_us_bottom h3 {
+    font-size: 1.3em;
+  }
+
+  .subcribe_about_us_bottom div {
+    flex-direction: column; /* Stack input and button */
+    gap: 15px; /* Space between stacked items */
+  }
+
+  .subcribe_about_us_bottom input[type="email"] {
+    border-radius: 8px; /* Full rounded corners when stacked */
+    width: 100%; /* Full width */
+  }
+
+  .subcribe_about_us_bottom div::after {
+    border-radius: 8px; /* Full rounded corners when stacked */
+    width: 100%; /* Full width */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero-container {
+    max-height: 350px; /* Further reduce hero height for mobile */
+    margin-bottom: 40px;
+  }
+
+  .hero-section-image img {
+    border-radius: 0; /* No rounding for very small screens */
+  }
+
+  .subcribe_about_us {
+    padding: 0 15px;
+  }
+
+  .subcribe_about_us_top {
+    font-size: 0.95em;
+    margin-bottom: 40px;
+  }
+
+  .subcribe_about_us_bottom {
+    padding: 25px 15px;
+    margin-bottom: 60px;
+  }
+
+  .subcribe_about_us_bottom h3 {
+    font-size: 1.1em;
+  }
+
+  .subcribe_about_us_bottom p {
+    font-size: 0.9em;
+  }
+}
