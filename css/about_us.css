@@ -1,0 +1,153 @@
+/* About Us Page Styles */
+
+.about-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f8f8f8;
+  margin-bottom: 50px;
+}
+
+.about-hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-hero p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.about-description {
+  flex: 1;
+  min-width: 300px; /* Ensures it doesn't get too narrow */
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.about-description p {
+  margin-bottom: 20px;
+}
+
+.board-of-trustees {
+  flex: 1;
+  min-width: 300px; /* Ensures it doesn't get too narrow */
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.board-of-trustees h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#view-board-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+#view-board-btn:hover {
+  background-color: #6d7885;
+}
+
+.board-members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-height: 0; /* Hidden by default */
+  overflow: hidden;
+  transition: max-height 0.7s ease-out, opacity 0.7s ease-out;
+  opacity: 0; /* Also hide with opacity for smoother transition */
+}
+
+.board-members-container.show-members {
+  max-height: 1500px; /* Adjust as needed to fit all members */
+  opacity: 1;
+}
+
+.board-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 120px; /* Adjust size of each member container */
+}
+
+.board-member img {
+  width: 100px; /* Size of the image */
+  height: 100px; /* Size of the image */
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover;
+  border: 3px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.board-member .member-initials {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-description,
+  .board-of-trustees {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .board-of-trustees {
+    padding: 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5em;
+  }
+
+  .about-hero p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .board-member {
+    width: 100px;
+  }
+
+  .board-member img {
+    width: 80px;
+    height: 80px;
+  }
+}

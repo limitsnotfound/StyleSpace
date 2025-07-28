@@ -35,13 +35,14 @@ a {
 
 .subcribe_about_us {
     margin: auto;
-    margin-top: 200px;
+    margin-top: 100px;
     max-width: 600px;
     text-align: center;
 }
 
 .subcribe_about_us_top {
-    font-size: 16px;
+    text-align: center;
+    font-size: 14px;
     font-family: 'Times New Roman';
     line-height: 1.5;
     margin-bottom: 50px;
