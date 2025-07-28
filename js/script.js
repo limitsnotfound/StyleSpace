@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error fetching navigation:', error));
 
+
     // Fetch and inject footer
     fetch("footer.html")
         .then(response => response.text())
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => console.error('Error fetching footer:', error));
 
 
+        
     // LOGIN AND SIGNUP FORM (ensure elements exist before trying to access them)
     // Encapsulate this in a function to be called after nav is loaded if buttons are in nav.html
     function initializeLoginSignup() {
