@@ -70,7 +70,7 @@
 }
 
 .phone-number {
-  color: #b0b0b0; /* Consistent text color */
+  color: rgb(16, 16, 235); /* Consistent text color */
   font-size: 1.2em;
   margin-top: 20px; /* Space above phone number */
   font-weight: bold; /* Make it stand out */
