@@ -83,6 +83,7 @@ a {
   line-height: 1.5;
 }
 
+<<<<<<< HEAD
 .subcribe_about_us_bottom div { /* Target the div containing the input */
   display: flex; /* Use flexbox for input and button alignment */
   justify-content: center; /* Center horizontally */
@@ -201,3 +202,233 @@ a {
     font-size: 0.9em;
   }
 }
+=======
+
+/* @Atomc_sam */
+
+.showcase-card{
+    padding: 40px;
+    position: relative;
+    justify-content: center;
+
+}
+
+.showcase-card img{
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.showcase-card:hover{
+    opacity: 1;
+}
+.overlay p{
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.showcase-btn{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.btn{
+    margin-bottom: 60px;
+    padding: 8px 14px;
+    background: rgba(156, 156, 156, 0.342);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: rgb(167, 159, 159);
+    color: rgb(5, 5, 5);
+    font-weight: bolder;
+}
+
+/* SECTION 2 #GRID CARD */
+
+.grid-card1{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: whitesmoke;
+
+}
+
+.card-showcase img{
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    padding-top: 5px;
+}
+
+.showcase-card .overlay2{
+     box-sizing: border-box;
+}
+
+.card-showcase .overlay2 p{
+        font-family: 'Courier New', Courier, monospace;
+     font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 4px rgba(233, 226, 226, 0.7);
+    color: #9c3232;
+}
+
+.card-showcase .overlay2 button{
+    background-color: rgba(196, 193, 193);
+    border-radius: 20px;
+    border-width: 0;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+/* .card-showcase .overlay2 button:hover{
+    background-color: rgb(230, 214, 186);
+} */
+
+.overlay2 button a{
+    text-decoration: 0;
+    color: #fff;
+    font-weight: bolder;
+    transition: 0.3s;
+
+}
+
+.tabi-shoe{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.tabi img{
+    border-radius: 10px;
+}
+
+.tabi-content{
+    background-color: white;
+    padding: 196px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.tabi-content button{
+  padding: 8px;   
+  background-color: whitesmoke; 
+  border-radius: 15px;
+  border-color: black;
+  transition: 0.3s;
+}
+
+.tabi-content button a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tabi-content button a:hover{
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.tabi-content button:hover{
+    background-color: rgb(39, 37, 37);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Footer */
+
+/* Footer */
+
+.external-footer{
+    display: block;
+    align-items: center;
+    
+}
+
+.external-footer .footer-click{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.footer-click a{
+    padding-top: 40px;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    
+}
+
+.footer-click a:hover{
+    background-color: whitesmoke;
+    color: #003153;
+
+}
+
+.external-footer-cont{
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.external-footer-cont{
+    background-color: whitesmoke;
+    padding: 100px;
+}
+
+.external-footer-cont p{
+      font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+      font-weight: bold;
+      background-color: rgb(223, 22, 22);
+      border-radius: 5px;
+      padding:  20px;
+      color: #fff;
+  
+}
+
+.external-footer-cont .work-with-us a{
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
+
+.external-footer-cont .work-with-us a:hover{
+    background-color: #034472;
+    color: #fff;
+    font-weight: bolder;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+
+
+
+>>>>>>> 16e84d6e685e3605998d8e4a306ef4d58e6fbe41
