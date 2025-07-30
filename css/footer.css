@@ -71,7 +71,7 @@
 
 .phone-number {
   color: rgb(16, 16, 235); /* Consistent text color */
-  font-size: 1.2em;
+  font-size: 0.9em;
   margin-top: 20px; /* Space above phone number */
   font-weight: bold; /* Make it stand out */
 }
@@ -98,7 +98,7 @@
 }
 
 .social-icons-list img:hover {
-  background-color: #007bff; /* Accent color on hover */
+  background-color: #53677c; /* Accent color on hover */
   transform: translateY(-5px); /* Lift effect */
 }
 
