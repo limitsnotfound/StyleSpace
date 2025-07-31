@@ -2,7 +2,7 @@
 
 .site-footer {
   background-color: rgb(229, 229, 229); /* light grey background for elegance */
-  color: #f0f0f0; /* Soft white text for contrast */
+  color: #333; /* Dark text for better contrast and readability */
   padding: 60px 20px 30px; /* Generous padding for breathing room */
   font-family: 'Arial', sans-serif; /* Clean, modern font */
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -34,7 +34,6 @@
   padding-bottom: 10px;
 }
 
-<<<<<<< HEAD
 .footer-menu-header::after {
   content: '';
   position: absolute;
@@ -57,7 +56,7 @@
 }
 
 .footer-section ul li a {
-  color: #0c0b61; /* Slightly desaturated white for links */
+  color: #0c0b61; /* Dark blue color for links */
   text-decoration: none;
   font-size: 0.95em; /* Slightly larger font for readability */
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
@@ -147,9 +146,3 @@
     font-size: 0.9em;
   }
 }
-=======
-.social-icons img {
-    width: 50%;
-}
-
->>>>>>> 16e84d6e685e3605998d8e4a306ef4d58e6fbe41
