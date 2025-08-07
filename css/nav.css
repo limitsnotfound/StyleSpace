@@ -72,7 +72,7 @@
     justify-items: center;
 }
 
-/* Hide hamburger menu by default on desktop */
+/* To Hide hamburger menu by default on desktop */
 .hamburger-menu {
     display: none;
 }
