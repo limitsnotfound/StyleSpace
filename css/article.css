@@ -1,0 +1,66 @@
+/* General article styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+}
+
+.article-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.article-header h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.article-header p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #7f8c8d;
+}
+
+.article-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.article-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .article-header h2 {
+    font-size: 2rem;
+  }
+  
+  .article-header p {
+    font-size: 1rem;
+  }
+
+  .article-content {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}

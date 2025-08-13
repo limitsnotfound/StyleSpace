@@ -17,6 +17,40 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error fetching navigation:', error));
 
+        document.addEventListener('DOMContentLoaded', function () {
+    // ... (Your existing code for fetching nav/footer and other functionalities) ...
+
+    // Hamburger menu toggle for phone mode
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navBar = document.querySelector('.navigation-bar');
+    
+    if (hamburgerMenu && navBar) {
+        hamburgerMenu.addEventListener('click', function () {
+            // Check if the mobile menu already exists
+            let mobileNavLinks = document.querySelector('.mobile-nav-links');
+
+            if (!mobileNavLinks) {
+                // Create the mobile menu container if it doesn't exist
+                mobileNavLinks = document.createElement('div');
+                mobileNavLinks.classList.add('mobile-nav-links');
+                
+                // Clone the left and right nav links from the desktop menu
+                const navLeftClone = document.querySelector('.navigation-bar-left').cloneNode(true);
+                const navRightClone = document.querySelector('.navigation-bar-right').cloneNode(true);
+                
+                // Append the cloned lists to the new mobile menu container
+                mobileNavLinks.appendChild(navLeftClone);
+                mobileNavLinks.appendChild(navRightClone);
+                
+                // Add the new menu container to the nav bar
+                navBar.appendChild(mobileNavLinks);
+            }
+            
+            // Toggle the 'show' class to display/hide the menu
+            mobileNavLinks.classList.toggle('show');
+        });
+    }
+});
 
     // Fetch and inject footer
     fetch("footer.html")

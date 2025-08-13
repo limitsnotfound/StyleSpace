@@ -1,29 +1,148 @@
-.footer {
-    margin: auto;
-    margin-top: 100px;
-    max-width: 900px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    margin-bottom: 100px;
+/* footer.css - Stylish Version */
+
+.site-footer {
+  background-color: rgb(229, 229, 229); /* light grey background for elegance */
+  color: #333; /* Dark text for better contrast and readability */
+  padding: 60px 20px 30px; /* Generous padding for breathing room */
+  font-family: 'Arial', sans-serif; /* Clean, modern font */
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin-top: 30px; /* Space above the footer */
+  text-align: center; /* Center align content globally */
 }
 
-.footer li{
-    font-size: 12px;
-    padding-bottom: 16px;
+.footer-grid-container {
+  max-width: 1200px; /* Max width for content, keeps it tidy */
+  margin: 0 auto; /* Center the grid container */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  gap: 40px; /* Space between columns */
+  justify-items: center; /* Center content in grid cells */
+  text-align: left; /* Revert text alignment for sections */
 }
 
-.footer_menu_header {
-    font-size: 12px;
+.footer-section {
+  padding: 15px; /* Padding inside each section */
 }
 
-.social-icons{
-    width: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.footer-menu-header {
+  font-size: 1.1em; /* Slightly larger for emphasis */
+  color: #007bff; /* Vibrant accent color for headers */
+  margin-bottom: 25px; /* Space below header */
+  text-transform: uppercase; /* Uppercase for a clean look */
+  letter-spacing: 1px; /* Slight letter spacing */
+  position: relative; /* For the elegant underline effect */
+  padding-bottom: 10px;
 }
 
-.social-icons img {
-    width: 50%;
+.footer-menu-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px; /* Short, elegant underline */
+  height: 3px;
+  background-color: #007bff; /* Matching accent color */
+  border-radius: 2px;
 }
 
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 15px; /* More space between list items */
+}
+
+.footer-section ul li a {
+  color: #0c0b61; /* Dark blue color for links */
+  text-decoration: none;
+  font-size: 0.95em; /* Slightly larger font for readability */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+  display: inline-block; /* Essential for transform to work */
+}
+
+.footer-section ul li a:hover {
+  color: black; /* Black on hover */
+  transform: translateX(5px); /* Gentle slide effect */
+}
+
+.phone-number {
+  color: rgb(16, 16, 235); /* Consistent text color */
+  font-size: 0.9em;
+  margin-top: 20px; /* Space above phone number */
+  font-weight: bold; /* Make it stand out */
+}
+
+/* Social Icons */
+.social-icons-list {
+  display: flex; /* Use flexbox for social icons */
+  justify-content: flex-start; /* Align icons to the left */
+  gap: 15px; /* Space between icons */
+  margin-top: 10px; /* Adjust spacing */
+}
+
+.social-icons-list li {
+  margin-bottom: 0; /* Remove extra margin from general li rule */
+}
+
+.social-icons-list img {
+  width: 40px; /* Larger icons for better visibility */
+  height: 40px;
+  border-radius: 50%; /* Make them perfectly round */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background for icons */
+  padding: 8px; /* Padding inside the circle */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover */
+}
+
+.social-icons-list img:hover {
+  background-color: #53677c; /* Accent color on hover */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  border-top: 1px solid #333333; /* A subtle separator line */
+  padding-top: 25px;
+  margin-top: 40px; /* Space above the bottom line */
+  text-align: center;
+  font-size: 0.8em;
+  color: #888888; /* Slightly darker text for copyright */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-grid-container {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    gap: 30px; /* Adjust gap when stacked */
+  }
+
+  .footer-section {
+    text-align: center; /* Center align sections when stacked */
+  }
+
+  .footer-menu-header::after {
+    left: 50%; /* Center the underline when section is centered */
+    transform: translateX(-50%);
+  }
+
+  .social-icons-list {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 40px 15px 20px;
+  }
+
+  .footer-menu-header {
+    font-size: 1em;
+  }
+
+  .footer-section ul li a,
+  .phone-number {
+    font-size: 0.9em;
+  }
+}
